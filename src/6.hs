@@ -4,5 +4,8 @@ sumOfSquares = foldr (\x -> (+) (x ^ 2)) 0
 squareOfSum :: [Int] -> Int
 squareOfSum xs = sum xs^2
 
-solution :: [Int] -> Int
-solution xs = squareOfSum xs - sumOfSquares xs
+sumSquareDifference :: [Int] -> Int
+sumSquareDifference xs = squareOfSum xs - sumOfSquares xs
+
+solution :: Int
+solution = sumSquareDifference [1..100]
