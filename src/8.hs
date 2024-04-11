@@ -25,9 +25,7 @@ input =
     \71636269561882670428252483600823257530420752963450"
 
 slices = do
-  i <- indices
+  i <- [0 .. 1000 - 13]
   return (take 13 (drop i input))
-  where
-    indices = [0 .. 1000 - 13]
 
 solution = maximum (map product slices)
