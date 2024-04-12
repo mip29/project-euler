@@ -24,8 +24,6 @@ input =
     \05886116467109405077541002256983155200055935729725\
     \71636269561882670428252483600823257530420752963450"
 
-slices = do
-  i <- [0 .. 1000 - 13]
-  return (take 13 (drop i input))
+slices = [take 13 (drop i input) | i <- [0 .. 1000 - 13]]
 
-solution = maximum (map product slices)
+solution = maximum $ map product slices
