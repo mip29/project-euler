@@ -1,7 +1,3 @@
+import Math.Util (lcmm)
 
-
-
-
-
-smallestNumberDivisibleBy :: [Int] -> Int
-smallestNumberDivisibleBy = undefined
+solution = lcmm [1 .. 20]
