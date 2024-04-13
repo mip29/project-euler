@@ -1,8 +1,3 @@
-fibonacci :: [Int]
-fibonacci = 0 : 1 : zipWith (+) fibonacci (tail fibonacci)
+import Math.Util (fibonacci)
 
-sumOfEvenLessThan :: Int -> Int
-sumOfEvenLessThan n = sum $ takeWhile (<= n) (filter even fibonacci)
-
-solution :: Int
-solution = sumOfEvenLessThan 4000000
+solution = sum $ takeWhile (<= 4_000_000) $ filter even fibonacci
